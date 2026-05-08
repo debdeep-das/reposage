@@ -27,7 +27,11 @@ class Settings(BaseSettings):
 
     retrieval_top_k: int = Field(default=20, ge=1, le=100)
     rerank_top_n: int = Field(default=5, ge=1, le=20)
-    similarity_threshold: float = Field(default=0.3, ge=0.0, le=1.0)
+    # 0.0 = no filter; the threshold is intentionally disabled in v1.
+    # Embedders are anisotropic — even unrelated chunks on nomic-embed-v1.5 score
+    # ~0.4–0.5 cosine, so any absolute threshold is meaningless until calibrated on
+    # a labeled eval set. Revisit in E1 once we have RAGAS data.
+    similarity_threshold: float = Field(default=0.0, ge=0.0, le=1.0)
 
     claude_model: str = "claude-opus-4-7"
     claude_max_tokens: int = Field(default=2048, ge=1, le=8192)
