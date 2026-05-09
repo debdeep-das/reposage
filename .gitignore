@@ -33,8 +33,6 @@ data/
 
 # OS
 .DS_Store
-docs/learning.md
-docs/quiz.md
-CLAUDE.md
-*.lock
-.env
+
+# Personal learning journal — kept locally, not in repo
+docs/_journal/
