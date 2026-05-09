@@ -36,3 +36,6 @@ data/
 
 # Personal learning journal — kept locally, not in repo
 docs/_journal/
+
+# Claude Code local session state
+.claude/
