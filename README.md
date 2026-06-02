@@ -68,4 +68,4 @@ API and CLI entry points are landing in Phase 1; see status below.
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE).
+Apache 2.0. See [`LICENSE`](LICENSE).
